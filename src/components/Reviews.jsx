@@ -1,12 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import clsx from 'clsx'
 import {
-  motion,
-  useAnimationFrame,
   useInView,
-  useMotionValue,
-  useSpring,
-  useTransform,
 } from 'framer-motion'
 
 import { Container } from '@/components/Container'
@@ -241,7 +236,8 @@ export function Reviews() {
            Search by cuisine, ingredients, allergens and more
         </h2>
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
-          About the filters
+          Calculate the nutritional information for any recipe, find recipes for what’s in your fridge and find recipes based on special diets, nutritional requirements, or favorite ingredients.
+          
         </p>
         <ReviewGrid />
       </Container>
