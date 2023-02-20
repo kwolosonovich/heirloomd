@@ -12,54 +12,53 @@ export default function Register() {
         <title>Sign Up - Heirloomd</title>
       </Head>
       <AuthLayout
-        title="Sign up for an account"
+        title='Sign up for an account'
         subtitle={
           <>
             Already registered?{' '}
-            <Link href="/login" className="text-cyan-600">
+            <Link href='/login' className='text-cyan-600'>
               Sign in
             </Link>{' '}
           </>
-        }
-      >
+        }>
         <form>
-          <div className="grid grid-cols-2 gap-6">
+          <div className='grid grid-cols-2 gap-6'>
             <TextField
-              label="First name"
-              id="first_name"
-              name="first_name"
-              type="text"
-              autoComplete="given-name"
+              label='First name'
+              id='first_name'
+              name='first_name'
+              type='text'
+              autoComplete='given-name'
               required
             />
             <TextField
-              label="Last name"
-              id="last_name"
-              name="last_name"
-              type="text"
-              autoComplete="family-name"
+              label='Last name'
+              id='last_name'
+              name='last_name'
+              type='text'
+              autoComplete='family-name'
               required
             />
             <TextField
-              className="col-span-full"
-              label="Email address"
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
+              className='col-span-full'
+              label='Email address'
+              id='email'
+              name='email'
+              type='email'
+              autoComplete='email'
               required
             />
             <TextField
-              className="col-span-full"
-              label="Password"
-              id="password"
-              name="password"
-              type="password"
-              autoComplete="new-password"
+              className='col-span-full'
+              label='Password'
+              id='password'
+              name='password'
+              type='password'
+              autoComplete='new-password'
               required
             />
           </div>
-          <Button type="submit" color="cyan" className="mt-8 w-full">
+          <Button type='submit' color='cyan' className='mt-8 w-full'>
             Sign up
           </Button>
         </form>

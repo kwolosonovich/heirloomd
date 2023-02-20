@@ -3,16 +3,15 @@ import { Container } from '@/components/Container'
 export function SecondaryFeatures() {
   return (
     <section
-      id="secondary-features"
-      aria-label="Features for building a portfolio"
-      className="py-20 sm:py-32"
-    >
+      id='secondary-features'
+      aria-label='Features for building a portfolio'
+      className='py-20 sm:py-32'>
       <Container>
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+        <div className='mx-auto max-w-2xl sm:text-center'>
+          <h2 className='text-3xl font-medium tracking-tight text-gray-900'>
             Grow your collection
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
+          <p className='mt-2 text-lg text-gray-600'>
             Discover new recipies and chef favorites
           </p>
         </div>

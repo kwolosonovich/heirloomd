@@ -12,36 +12,35 @@ export default function Login() {
         <title>Sign In - Heirloomd</title>
       </Head>
       <AuthLayout
-        title="Sign in to account"
+        title='Sign in to account'
         subtitle={
           <>
             Don’t have an account?{' '}
-            <Link href="/register" className="text-cyan-600">
+            <Link href='/register' className='text-cyan-600'>
               Sign up
             </Link>{' '}
           </>
-        }
-      >
+        }>
         <form>
-          <div className="space-y-6">
+          <div className='space-y-6'>
             <TextField
-              label="Email address"
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
+              label='Email address'
+              id='email'
+              name='email'
+              type='email'
+              autoComplete='email'
               required
             />
             <TextField
-              label="Password"
-              id="password"
-              name="password"
-              type="password"
-              autoComplete="current-password"
+              label='Password'
+              id='password'
+              name='password'
+              type='password'
+              autoComplete='current-password'
               required
             />
           </div>
-          <Button type="submit" color="cyan" className="mt-8 w-full">
+          <Button type='submit' color='cyan' className='mt-8 w-full'>
             Sign in
           </Button>
         </form>
