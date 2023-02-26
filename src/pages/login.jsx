@@ -3,7 +3,7 @@ import Link from 'next/link'
 // import { useSession, signIn } from "next-auth/react"
 
 import { AuthLayout } from '@/components/AuthLayout'
-import { Button } from '@/components/Button'
+// import { Button } from '@/components/Button'
 import { TextField } from '@/components/Fields'
 
 
@@ -47,13 +47,13 @@ export default function Login() {
               required
             />
           </div>
-          <Button type='submit' color='cyan' className='mt-8 w-full' onClick={() => signIn()}>
+          {/* <Button type='submit' color='cyan' className='mt-8 w-full' onClick={() => signIn()}>
             Sign in
-          </Button>
+          </Button> */}
         </form>
-        <Button type='submit' color='cyan' className='mt-8 w-full' onClick={() => signIn('google')}>
+        {/* <Button type='submit' color='cyan' className='mt-8 w-full' onClick={() => signIn('google')}>
             Sign in with Google
-          </Button>
+          </Button> */}
       </AuthLayout>
     </>
   )
