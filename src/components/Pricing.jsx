@@ -16,8 +16,7 @@ export function Pricing() {
             Getting started
           </h2>
           <p className='w-50 mt-2 text-lg text-gray-600'>
-            Create a new account save recipes to your collections and to create
-            recipe books
+            Discover your next heirloom
           </p>
         </div>
       </Container>

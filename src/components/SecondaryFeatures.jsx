@@ -12,7 +12,7 @@ export function SecondaryFeatures() {
             Grow your collection
           </h2>
           <p className='mt-2 text-lg text-gray-600'>
-            Discover new recipies and chef favorites
+            {/* //TODO */}
           </p>
         </div>
         {/* TODO: feature cards */}

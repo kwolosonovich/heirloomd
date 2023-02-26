@@ -12,13 +12,13 @@ export function CallToAction() {
       <Container className='relative'>
         <div className='mx-auto max-w-md sm:text-center'>
           <h2 className='text-3xl font-medium tracking-tight text-white sm:text-4xl'>
-            Ways to share
+            Coming soon...
           </h2>
           <p className='mt-4 text-lg text-gray-300'>
-            Share collections with friends
+            {/* TODO Share collections with friends */}
           </p>
           <p className='mt-4 text-lg text-gray-300'>
-            Design and order a printed recipe book
+            {/* TODO Design and order a printed recipe book */}
           </p>
         </div>
       </Container>

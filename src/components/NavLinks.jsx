@@ -7,8 +7,8 @@ export function NavLinks() {
 
   return [
     ['Discover', '#discover'],
-    ['Grow', '#grow'],
     ['Share', '#share'],
+    ['Collect', '#collect'],
   ].map(([label, href], index) => (
     <Link
       key={label}

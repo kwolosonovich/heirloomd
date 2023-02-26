@@ -226,12 +226,10 @@ export function Reviews() {
         <h2
           id='reviews-title'
           className='text-3xl font-medium tracking-tight text-gray-900 sm:text-center'>
-          Search by cuisine, ingredients, allergens and more
+          Search by image and description 
         </h2>
         <p className='mt-2 text-lg text-gray-600 sm:text-center'>
-          Calculate the nutritional information for any recipe, find recipes for
-          what’s in your fridge and find recipes based on special diets,
-          nutritional requirements, or favorite ingredients.
+          {/* TODO  */}
         </p>
         <ReviewGrid />
       </Container>
