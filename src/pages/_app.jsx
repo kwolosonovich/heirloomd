@@ -3,6 +3,7 @@ import { SessionProvider } from "next-auth/react"
 import 'focus-visible'
 
 export default function App({ Component, session, ...pageProps }) {
+  console.log(pageProps)
   return (
     <SessionProvider session={session}>
       <Component {...pageProps} />
