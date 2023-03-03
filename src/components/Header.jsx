@@ -6,6 +6,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
+import { useSession } from 'next-auth/react'
 
 function MenuIcon(props) {
   return (
@@ -45,20 +46,21 @@ function MobileNavLink({ children, ...props }) {
 }
 
 export function Header() {
+  const { data: session, status } = useSession({ required: false })
   return (
     <header>
       <nav>
         <Container className='relative z-50 flex justify-between py-8'>
           <div className='relative z-10 flex items-center gap-16'>
-            <Link href='/' aria-label='Home'>
+            {/* <Link href='/' aria-label='Home'>
               <Logo className='h-10 w-auto' />
             </Link>
             <div className='hidden lg:flex lg:gap-10'>
               <NavLinks />
-            </div>
+            </div> */}
           </div>
           <div className='flex items-center gap-6'>
-            <Popover className='lg:hidden'>
+            {/* <Popover className='lg:hidden'>
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -115,13 +117,16 @@ export function Header() {
                   </AnimatePresence>
                 </>
               )}
-            </Popover>
-            <Button href='/login' variant='outline' className='hidden lg:block'>
-              Log in
-            </Button>
-            <Button href='#' className='hidden lg:block'>
-              Download
-            </Button>
+            </Popover> */}
+            {status === 'authenticated' ? (
+              <Button href='/SignOut' variant='outline' className='lg:block'>
+                Sign out
+              </Button>
+            ) : (
+              <Button href='/SignIn' variant='outline' className=' lg:block'>
+                Sign in
+              </Button>
+            )}
           </div>
         </Container>
       </nav>

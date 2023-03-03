@@ -1,37 +1,61 @@
-// import Head from 'next/head'
+import { useSession, signOut, getSession } from 'next-auth/react'
 
-// import { CallToAction } from '@/components/CallToAction'
-// import { Footer } from '@/components/Footer'
-// import { Header } from '@/components/Header'
-// import { Hero } from '@/components/Hero'
-// import { Pricing } from '@/components/Pricing'
-// import { PrimaryFeatures } from '@/components/PrimaryFeatures'
-// import { Reviews } from '@/components/Reviews'
-// import { SecondaryFeatures } from '@/components/SecondaryFeatures'
+import Head from 'next/head'
+
+import { CallToAction } from '@/components/CallToAction'
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
+import { Hero } from '@/components/Hero'
+import { Pricing } from '@/components/Pricing'
+import { PrimaryFeatures } from '@/components/PrimaryFeatures'
+import { Reviews } from '@/components/Reviews'
+import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { ComingSoon } from '@/components/ComingSoon'
 
 export default function Home() {
+  const { data: session, status } = useSession() //{ required: false }
 
+  console.log(status)
   return (
     <>
-      {/* <Head>
-        <title>Create. Inspire. Enjoy.</title>
-        <meta
-          name="description"
-          content="Create. Inspire. Enjoy."
-        />
-      </Head> */}
-      {/* <Header /> */}
-      <ComingSoon />
-      <main>
-        {/* <Hero /> */}
-        {/* <PrimaryFeatures /> */}
-        {/* <SecondaryFeatures /> */}
-        {/* <CallToAction /> */}
-        {/* <Reviews /> */}
-        {/* <Pricing /> */}
-      </main>
-      {/* <Footer /> */}
+      {status === 'authenticated' ? (
+        <>
+          <Head>
+            <title>Create. Inspire. Enjoy.</title>
+            <meta name='description' content='Create. Inspire. Enjoy.' />
+          </Head>
+          <Header />
+          <main>
+            <Hero />
+            <PrimaryFeatures />
+            <SecondaryFeatures />
+            <CallToAction />
+            <Reviews />
+            <Pricing />
+          </main>
+          <Footer />
+        </>
+      ) : (
+        <>
+          <Header />
+          <ComingSoon />
+        </>
+      )}
     </>
   )
+}
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/SignIn',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
 }
