@@ -119,11 +119,11 @@ export function Header() {
               )}
             </Popover> */}
             {status === 'authenticated' ? (
-              <Button href='/SignOut' variant='outline' className='lg:block'>
+              <Button href='/sign-out' variant='outline' className='lg:block'>
                 Sign out
               </Button>
             ) : (
-              <Button href='/SignIn' variant='outline' className=' lg:block'>
+              <Button href='/sign-in' variant='outline' className='lg:block '>
                 Sign in
               </Button>
             )}

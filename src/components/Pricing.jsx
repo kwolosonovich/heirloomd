@@ -15,9 +15,7 @@ export function Pricing() {
             className='text-3xl font-medium tracking-tight text-gray-900'>
             Getting started
           </h2>
-          <p className='w-50 mt-2 text-lg text-gray-600'>
-            Discover your next heirloom
-          </p>
+          <p className='w-50 mt-2 text-lg text-gray-600'>Coming soon...</p>
         </div>
       </Container>
     </section>

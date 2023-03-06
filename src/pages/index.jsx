@@ -13,9 +13,7 @@ import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { ComingSoon } from '@/components/ComingSoon'
 
 export default function Home() {
-  const { data: session, status } = useSession() //{ required: false }
-
-  console.log(status)
+  const { data: session, status } = useSession({ required: true })
   return (
     <>
       {status === 'authenticated' ? (
@@ -27,9 +25,9 @@ export default function Home() {
           <Header />
           <main>
             <Hero />
-            <PrimaryFeatures />
-            <SecondaryFeatures />
             <CallToAction />
+            {/* <PrimaryFeatures /> */}
+            {/* <SecondaryFeatures /> */}
             <Reviews />
             <Pricing />
           </main>
@@ -50,7 +48,7 @@ export const getServerSideProps = async (context) => {
   if (!session) {
     return {
       redirect: {
-        destination: '/SignIn',
+        destination: '/sign-in',
       },
     }
   }

@@ -14,21 +14,16 @@ const SignIn = () => {
   if (loading) {
     return <div>Loading</div>
   }
-  console.log(status)
   return (
     <>
-      <Header />
-      <ComingSoon />
-      {/* <AuthLayout title='Sign in to account'>
+      <AuthLayout title='Sign in to account'>
         <Button
           type='submit'
-          color='cyan'
-          className='mt-8 w-full'
-          onClick={() => signIn('google')}
-          href='/'>
+          className='mt-8 w-full bg-green-600 hover:bg-green-500'
+          onClick={() => signIn('google')}>
           Sign in with Google
         </Button>
-      </AuthLayout> */}
+      </AuthLayout>
     </>
   )
 }
@@ -37,6 +32,7 @@ export default SignIn
 
 export const getServerSideProps = async (context) => {
   const session = await getSession(context)
+  console.log(session)
   if (session) {
     return {
       redirect: {

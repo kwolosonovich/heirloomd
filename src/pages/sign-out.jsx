@@ -19,7 +19,7 @@ const SignOut = () => {
         title='Sign out of account'
         subtitle={
           <>
-            <Link href='/signOut' className='text-cyan-600'>
+            <Link href='/signOut' className='text-red'>
               Sign out
             </Link>{' '}
           </>
@@ -27,10 +27,9 @@ const SignOut = () => {
         <form>
           <Button
             type='submit'
-            color='cyan'
-            className='mt-8 w-full'
-            href='/SignIn'
-            onClick={() => signOut()}>
+            className='mt-8 w-full bg-green-600 hover:bg-green-500'
+            href='/sign-in'
+            onClick={() => signOut('google')}>
             Sign out
           </Button>
         </form>
@@ -46,7 +45,7 @@ export const getServerSideProps = async (context) => {
   if (!session) {
     return {
       redirect: {
-        destination: '/SignIn',
+        destination: '/coming-soon',
       },
     }
   }
