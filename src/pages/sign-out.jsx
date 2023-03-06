@@ -27,7 +27,7 @@ const SignOut = () => {
         <form>
           <Button
             type='submit'
-            className='mt-8 w-full bg-green-600 hover:bg-green-500'
+            className='mt-8 w-full bg-green-600 hover:bg-green-500 active:bg-green-600'
             href='/sign-in'
             onClick={() => signOut('google')}>
             Sign out
