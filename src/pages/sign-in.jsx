@@ -9,7 +9,7 @@ import { TextField } from '@/components/Fields'
 import { Header } from '@/components/Header'
 
 const SignIn = () => {
-  const { data: session, status } = useSession() //{ required: false }
+  const { data: session, status } = useSession() // { required: false }
   const { loading } = useSession()
   if (loading) {
     return <div>Loading</div>
@@ -19,7 +19,7 @@ const SignIn = () => {
       <AuthLayout title='Sign in to account'>
         <Button
           type='submit'
-          className='mt-8 w-full bg-green-600 hover:bg-green-500'
+          className='mt-8 w-full bg-purple hover:bg-medPurple active:bg-lightPurple'
           onClick={() => signIn('google')}>
           Sign in with Google
         </Button>

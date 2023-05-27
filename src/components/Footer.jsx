@@ -9,15 +9,14 @@ export function Footer() {
         <div className='flex flex-col items-start justify-between gap-y-12 pt-16 pb-6 lg:flex-row lg:items-center lg:py-16'>
           <div>
             <div className='flex items-center text-gray-900'>
-              <Logomark className='h-10 w-10 flex-none fill-red' />
+              <Logomark className='h-10 w-10 flex-none fill-purple' />
               <div className='ml-4'>
                 <p className='text-base font-semibold'>Heirloomd</p>
-                <p className='mt-1 text-sm'>Create. Inspire. Enjoy.</p>
+                <p className='mt-1 text-sm text-purple'>
+                  Your ultimate antiquing companion
+                </p>
               </div>
             </div>
-            <nav className='mt-11 flex gap-8'>
-              <NavLinks />
-            </nav>
           </div>
         </div>
         <div className='flex flex-col items-center border-t border-gray-200 pt-6 pb-6 md:flex-row-reverse md:justify-between md:pt-6'>
