@@ -34,14 +34,38 @@ module.exports = {
         '5xl': '2.5rem',
       },
       colors: ({ colors }) => ({
+        blue: {
+          DEFAULT: '#A6C4BC',
+          dark: '#A6C4BC',
+        },
+        cream: {
+          DEFAULT: '#FDF1ED',
+          dark: '#250c04',
+        },
         gray: colors.neutral,
         green: {
-          DEFAULT: '#3A7D44',
-          dark: '#61E592',
+          DEFAULT: '#CF4747',
+          dark: '#CF4747',
+        },
+        lightPurple: {
+          DEFAULT: '#816e87',
+          dark: '#56495a',
+        },
+        medPurple: {
+          DEFAULT: '#56495a',
+          dark: '#615365',
+        },
+        orange: {
+          DEFAULT: '#EA7A58',
+          dark: '#f2a892',
+        },
+        purple: {
+          DEFAULT: '#4B404F',
+          dark: '#615365',
         },
         red: {
-          DEFAULT: '#661615',
-          dark: '#E37978',
+          DEFAULT: '#D55D5D',
+          dark: '#d65c5c',
         },
       }),
       fontFamily: {

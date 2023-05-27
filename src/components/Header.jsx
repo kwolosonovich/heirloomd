@@ -48,7 +48,7 @@ function MobileNavLink({ children, ...props }) {
 export function Header() {
   const { data: session, status } = useSession({ required: false })
   return (
-    <header>
+    <header className='bg-gray'>
       <nav>
         <Container className='relative z-50 flex justify-between py-8'>
           <div className='relative z-10 flex items-center gap-16'>

@@ -19,7 +19,7 @@ const SignOut = () => {
         title='Sign out of account'
         subtitle={
           <>
-            <Link href='/signOut' className='text-red'>
+            <Link href='/signOut' className='text-purple'>
               Sign out
             </Link>{' '}
           </>
@@ -27,7 +27,7 @@ const SignOut = () => {
         <form>
           <Button
             type='submit'
-            className='mt-8 w-full bg-green-600 hover:bg-green-500 active:bg-green-600'
+            className='mt-8 w-full bg-purple hover:bg-medPurple active:bg-lightPurple'
             href='/sign-in'
             onClick={() => signOut('google')}>
             Sign out

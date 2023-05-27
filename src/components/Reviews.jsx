@@ -83,7 +83,7 @@ function StarRating({ rating }) {
           key={index}
           className={clsx(
             'h-5 w-5',
-            rating > index ? 'fill-green-500' : 'fill-gray-300',
+            rating > index ? 'fill-orange' : 'fill-gray-300',
           )}
         />
       ))}
@@ -225,10 +225,10 @@ export function Reviews() {
       <Container>
         <h2
           id='reviews-title'
-          className='text-3xl font-medium tracking-tight text-gray-900 sm:text-center'>
+          className='text-3xl font-medium tracking-tight text-purple sm:text-center'>
           How it works
         </h2>
-        <p className='mt-2 text-lg text-gray-600 sm:text-center'>
+        <p className='mt-2 text-lg text-purple sm:text-center'>
           Search by image and description
         </p>
         <ReviewGrid />
