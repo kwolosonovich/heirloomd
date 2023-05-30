@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { getSession, signOut } from 'next-auth/react'
 
 import { AuthLayout } from '@/components/AuthLayout'
@@ -20,9 +21,9 @@ const SignOut = () => {
             Sign out
           </Button>
           <div className='w-full text-center'>
-            <a href='/' className='leading-6 text-purple'>
+            <Link href='/' className='leading-6 text-purple'>
               Back to home
-            </a>
+            </Link>
           </div>
         </form>
       </AuthLayout>

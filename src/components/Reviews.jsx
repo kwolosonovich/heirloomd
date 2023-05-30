@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import Link from 'next/link'
 import clsx from 'clsx'
 import { useInView } from 'framer-motion'
 
@@ -207,9 +208,9 @@ export function Reviews() {
         <p className='mt-2 text-lg text-purple sm:text-center'>
           We believe in transparency and value the opinions of our community.
           Click{' '}
-          <a className='text-orange' href='/write-review'>
+          <Link className='text-orange' href='/write-review'>
             here
-          </a>{' '}
+          </Link>{' '}
           to write a review.
         </p>
         <ReviewGrid />

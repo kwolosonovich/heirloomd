@@ -1,14 +1,10 @@
 import Link from 'next/link'
 
-import { Logo } from '@/components/Logo'
-
 export function AuthLayout({ title, subtitle, children }) {
   return (
     <main className='flex min-h-full overflow-hidden sm:py-28'>
       <div className='mx-auto flex w-full max-w-2xl flex-col px-4 sm:px-6'>
-        <Link href='/' aria-label='Home'>
-          {/* <Logo className='mx-auto h-10 w-auto' /> */}
-        </Link>
+        <Link href='/' aria-label='Home'></Link>
         <div className='relative mt-12 sm:mt-16'>
           <h1 className='text-center text-2xl font-medium tracking-tight text-purple'>
             {title}

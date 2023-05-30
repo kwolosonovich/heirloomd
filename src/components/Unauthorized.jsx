@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function Unauthorized() {
   return (
     <>
@@ -10,10 +12,12 @@ export function Unauthorized() {
             Sorry, you do not have permission to view this page.
           </p>
           <div className='mt-10 flex justify-center'>
-            <a href='/' className='text-sm font-semibold leading-6 text-orange'>
+            <Link
+              href='/'
+              className='text-sm font-semibold leading-6 text-orange'>
               <span aria-hidden='true'>&larr;</span>
               Back to home
-            </a>
+            </Link>
           </div>
         </div>
       </main>

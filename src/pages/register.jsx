@@ -1,4 +1,4 @@
-import { useSession } from 'next-auth/react'
+import { getSession, useSession } from 'next-auth/react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -88,4 +88,19 @@ export default function Register() {
       )}
     </>
   )
+}
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/coming-soon',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
 }

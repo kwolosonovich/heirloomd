@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function PageNotFound() {
   return (
     <>
@@ -11,10 +13,12 @@ export function PageNotFound() {
           </p>
 
           <div className='mt-10 flex justify-center'>
-            <a href='/' className='text-sm font-semibold leading-6 text-orange'>
+            <Link
+              href='/'
+              className='text-sm font-semibold leading-6 text-orange'>
               <span aria-hidden='true'>&larr;</span>
               Back to home
-            </a>
+            </Link>
           </div>
         </div>
       </main>

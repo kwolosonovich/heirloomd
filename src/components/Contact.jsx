@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 export function Contact() {
@@ -133,9 +135,11 @@ export function Contact() {
             className='mb-5 block w-full rounded-md bg-orange px-3 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange'>
             Submit
           </button>
-          <a href='/' className='text-sm font-semibold leading-6 text-gray-900'>
+          <Link
+            href='/'
+            className='text-sm font-semibold leading-6 text-gray-900'>
             Cancel
-          </a>
+          </Link>
         </div>
       </form>
     </div>
