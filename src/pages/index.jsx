@@ -20,7 +20,7 @@ export default function Home() {
             <title>Create. Inspire. Enjoy.</title>
             <meta name='description' content='Create. Inspire. Enjoy.' />
           </Head> */}
-          <Header />
+          <Header status={status} />
           <main>
             <Hero />
             <CallToAction />
@@ -32,7 +32,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          <Header />
+          <Header status={status} />
           <ComingSoon />
         </>
       )}

@@ -44,7 +44,7 @@ function MobileNavLink({ children, ...props }) {
   )
 }
 
-export function Header() {
+export function Header(status) {
   return (
     <header className='bg-gray'>
       <nav>
