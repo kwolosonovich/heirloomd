@@ -29,7 +29,6 @@ export default SignIn
 
 export const getServerSideProps = async (context) => {
   const session = await getSession(context)
-  console.log(session)
   if (session) {
     return {
       redirect: {

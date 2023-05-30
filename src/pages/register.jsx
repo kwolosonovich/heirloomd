@@ -82,7 +82,7 @@ export default function Register() {
         </>
       ) : (
         <>
-          <Header status={status} />
+          <Header />
           <ComingSoon />
         </>
       )}

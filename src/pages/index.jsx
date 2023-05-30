@@ -1,5 +1,5 @@
 import { useSession, getSession } from 'next-auth/react'
-// import Head from 'next/head'
+import Head from 'next/head'
 
 import { CallToAction } from '@/components/CallToAction'
 import { ComingSoon } from '@/components/ComingSoon'
@@ -8,7 +8,6 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { Plans } from '@/components/Plans'
 import { Reviews } from '@/components/Reviews'
-// import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 
 export default function Home() {
   const { data: status } = useSession({ required: true })
@@ -16,15 +15,14 @@ export default function Home() {
     <>
       {status === 'authenticated' ? (
         <>
-          {/* <Head>
+          <Head>
             <title>Create. Inspire. Enjoy.</title>
             <meta name='description' content='Create. Inspire. Enjoy.' />
-          </Head> */}
-          <Header status={status} />
+          </Head>
+          <Header />
           <main>
             <Hero />
             <CallToAction />
-            {/* <SecondaryFeatures /> */}
             <Plans />
             <Reviews />
           </main>
@@ -32,7 +30,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          <Header status={status} />
+          <Header />
           <ComingSoon />
         </>
       )}

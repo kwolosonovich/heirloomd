@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useSession } from 'next-auth/react'
 import { Popover } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -44,7 +45,8 @@ function MobileNavLink({ children, ...props }) {
   )
 }
 
-export function Header(status) {
+export function Header() {
+  const { data: status } = useSession({ required: false })
   return (
     <header className='bg-gray'>
       <nav>
@@ -108,8 +110,8 @@ export function Header(status) {
                                 Sign out
                               </MobileNavLink>
                             ) : (
-                              <MobileNavLink href='/login' variant='outline'>
-                                Log in
+                              <MobileNavLink href='/sign-in' variant='outline'>
+                                Sign in
                               </MobileNavLink>
                             )}
                           </div>
