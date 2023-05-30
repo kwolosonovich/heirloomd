@@ -56,7 +56,7 @@ export function Header() {
               <Logomark className='h-10 w-10 flex-none fill-purple' />
             </Link>
             <div className='hidden lg:flex lg:gap-10'>
-              <NavLinks />
+              {status === 'authenticated' && <NavLinks />}
             </div>
           </div>
           <div className='flex items-center gap-6'>

@@ -3,7 +3,6 @@ import { useSession } from 'next-auth/react'
 import { Listbox, Transition } from '@headlessui/react'
 
 import { Container } from '@/components/Container'
-import { Unauthorized } from '@/components/Unauthorized'
 
 import {
   CheckIcon,
