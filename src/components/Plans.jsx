@@ -11,7 +11,8 @@ const plans = [
     name: 'Basic',
     featured: false,
     price: { Monthly: '$0', Annually: '$0' },
-    description: 'Discover priceless finds for free',
+    description:
+      'Discover priceless finds at no cost with our free plan option',
     button: {
       label: 'Get started for free',
       href: '/register',
@@ -35,7 +36,7 @@ const plans = [
     features: [
       'Private account',
       'Evaluation tool access',
-      'Twenty searches per day',
+      'Ten searches per day',
     ],
     logomarkClassName: 'fill-white',
   },
@@ -43,7 +44,7 @@ const plans = [
     name: 'Premium',
     featured: false,
     price: { Monthly: '$99', Annually: '$1,089' },
-    description: 'Unlock a world of endless treasures',
+    description: 'Ideal for power users or professionals',
     button: {
       label: 'Subscribe',
       href: '/register',
@@ -52,6 +53,26 @@ const plans = [
       'Private account',
       'Evaluation tool access',
       'Endless searches per day',
+      'Full access to all advanced functionalities',
+    ],
+    logomarkClassName: 'fill-purple',
+  },
+  {
+    name: 'Business',
+    featured: false,
+    price: {},
+    description:
+      'Custom plans tailored specifically for businesses and organizations. Build a plan that suits your specific needs',
+    button: {
+      className: 'disabled',
+      label: 'Contact us',
+      href: '/contact',
+    },
+    features: [
+      'Private accounts',
+      'Evaluation tool access',
+      'Seamless collaboration tools',
+      'Options to scale your plan as needed',
     ],
     logomarkClassName: 'fill-purple',
   },
@@ -172,24 +193,25 @@ function Plan({
   )
 }
 
-export function Pricing() {
+export function Plans() {
   let [activePeriod, setActivePeriod] = useState('Monthly')
 
   return (
     <section
-      id='pricing'
+      id='plans'
       aria-labelledby='pricing-title'
       className='border-t border-gray-200 bg-gray-100 py-20 sm:py-32'>
       <Container>
         <div className='mx-auto max-w-2xl text-center'>
           <h2
             id='pricing-title'
-            className='text-3xl font-medium tracking-tight text-gray-900'>
-            Flat pricing, no management fees.
+            className='text-3xl font-medium tracking-tight text-purple'>
+            Plan options
           </h2>
           <p className='mt-2 text-lg text-gray-600'>
-            Whether you’re one person trying to get ahead or a big firm trying
-            to take over the world, we’ve got a plan for you.
+            We offer a range of plans designed to cater to your unique needs and
+            preferences. Whether you're an individual user or business, we have
+            the perfect plan for you.
           </p>
         </div>
 
@@ -235,7 +257,7 @@ export function Pricing() {
           </div>
         </div>
 
-        <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-3'>
+        <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-4'>
           {plans.map((plan) => (
             <Plan key={plan.name} {...plan} activePeriod={activePeriod} />
           ))}

@@ -19,7 +19,7 @@ const SignIn = () => {
       <AuthLayout title='Sign in to account'>
         <Button
           type='submit'
-          className='mt-8 w-full bg-purple hover:bg-medPurple active:bg-lightPurple'
+          className='w-full bg-purple hover:bg-medPurple active:bg-lightPurple'
           onClick={() => signIn('google')}>
           Sign in with Google
         </Button>

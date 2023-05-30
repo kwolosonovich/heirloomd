@@ -4,7 +4,7 @@ import { NavLinks } from '@/components/NavLinks'
 
 export function Footer() {
   return (
-    <footer className='border-t border-gray-200'>
+    <footer className='border-t border-gray-200 shadow-gray-900/5'>
       <Container>
         <div className='flex flex-col items-start justify-between gap-y-12 pt-16 pb-6 lg:flex-row lg:items-center lg:py-16'>
           <div>

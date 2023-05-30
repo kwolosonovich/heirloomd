@@ -41,30 +41,6 @@ const reviews = [
     author: 'LazyRich99',
     rating: 5,
   },
-  {
-    title: 'Wish I could give 6 stars',
-    body: 'This is literally the most important app you will ever download in your life. Get on this before it’s so popular that everyone else is getting these tips too.',
-    author: 'SarahLuvzCash',
-    rating: 5,
-  },
-  {
-    title: 'Bought an island.',
-    body: 'Yeah, you read that right. Want your own island too? Get Pocket.',
-    author: 'ScroogeMcduck',
-    rating: 5,
-  },
-  {
-    title: 'No more debt!',
-    body: 'After 2 weeks of trading on Pocket I was debt-free. Why did I even go to school at all when Pocket exists?',
-    author: 'BruceWayne',
-    rating: 5,
-  },
-  {
-    title: 'I’m 13 and I’m rich.',
-    body: 'I love that with Pocket’s transaction anonymization I could sign up and start trading when I was 12 years old. I had a million dollars before I had armpit hair!',
-    author: 'RichieRich',
-    rating: 5,
-  },
 ]
 
 function StarIcon(props) {
@@ -226,10 +202,15 @@ export function Reviews() {
         <h2
           id='reviews-title'
           className='text-3xl font-medium tracking-tight text-purple sm:text-center'>
-          How it works
+          What people are saying
         </h2>
         <p className='mt-2 text-lg text-purple sm:text-center'>
-          Search by image and description
+          We believe in transparency and value the opinions of our community.
+          Click{' '}
+          <a className='text-orange' href='/write-review'>
+            here
+          </a>{' '}
+          to write a review.
         </p>
         <ReviewGrid />
       </Container>

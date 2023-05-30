@@ -1,5 +1,4 @@
 import { useSession, signOut, getSession } from 'next-auth/react'
-
 import Head from 'next/head'
 
 import { CallToAction } from '@/components/CallToAction'
@@ -7,7 +6,7 @@ import { ComingSoon } from '@/components/ComingSoon'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { Pricing } from '@/components/Pricing'
+import { Plans } from '@/components/Plans'
 import { Reviews } from '@/components/Reviews'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 
@@ -17,17 +16,17 @@ export default function Home() {
     <>
       {status === 'authenticated' ? (
         <>
-          <Head>
+          {/* <Head>
             <title>Create. Inspire. Enjoy.</title>
             <meta name='description' content='Create. Inspire. Enjoy.' />
-          </Head>
+          </Head> */}
           <Header />
           <main>
             <Hero />
             <CallToAction />
             {/* <SecondaryFeatures /> */}
+            <Plans />
             <Reviews />
-            <Pricing />
           </main>
           <Footer />
         </>
