@@ -46,7 +46,7 @@ function MobileNavLink({ children, ...props }) {
 }
 
 export function Header() {
-  const { data: status } = useSession({ required: false })
+  const { data: session, status } = useSession({ required: false })
   return (
     <header className='bg-gray'>
       <nav>

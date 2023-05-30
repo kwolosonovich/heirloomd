@@ -7,7 +7,7 @@ import { Button } from '@/components/Button'
 // import { Header } from '@/components/Header'
 
 const SignIn = () => {
-  const { loading } = useSession()
+  const { loading, data: status } = useSession()
   if (loading) {
     return <div>Loading</div>
   }

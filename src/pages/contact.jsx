@@ -6,7 +6,7 @@ import { Contact } from '@/components/Contact'
 import { Unauthorized } from '@/components/Unauthorized'
 
 export default function WriteAReview() {
-  const { data: status } = useSession({ required: true })
+  const { data: session, status } = useSession({ required: true })
   return (
     <>
       {status === 'authenticated' ? (
