@@ -1,13 +1,10 @@
-import { useState } from 'react'
 import Head from 'next/head'
-import { getSession, useSession, signOut } from 'next-auth/react'
+import { getSession, signOut } from 'next-auth/react'
 
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 
 const SignOut = () => {
-  const { data: session, status } = useSession()
-  const [content, setContent] = useState()
   return (
     <>
       <Head>

@@ -1,5 +1,4 @@
 import { Fragment, useState } from 'react'
-import { useSession } from 'next-auth/react'
 import { Listbox, Transition } from '@headlessui/react'
 
 import { Container } from '@/components/Container'
@@ -35,7 +34,6 @@ function classNames(...classes) {
 }
 
 export function SearchForm() {
-  const { data: session, status } = useSession({ required: true })
   const [selected, setSelected] = useState(people[3])
   return (
     <Container className='my-10'>

@@ -1,37 +1,6 @@
-import { useState } from 'react'
-
 import { TextField } from '@/components/Fields'
 
-const assignees = [
-  { name: 'Unassigned', value: null },
-  {
-    name: 'Wade Cooper',
-    value: 'wade-cooper',
-    avatar:
-      'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  // More items...
-]
-const labels = [
-  { name: 'Unlabelled', value: null },
-  { name: 'Engineering', value: 'engineering' },
-  // More items...
-]
-const dueDates = [
-  { name: 'No due date', value: null },
-  { name: 'Today', value: 'today' },
-  // More items...
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export function ReviewForm() {
-  const [assigned, setAssigned] = useState(assignees[0])
-  const [labelled, setLabelled] = useState(labels[0])
-  const [dated, setDated] = useState(dueDates[0])
-
   return (
     <>
       <form action='#' className='relative -mt-10 w-full pt-0'>

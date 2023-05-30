@@ -6,7 +6,6 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
-import { useSession } from 'next-auth/react'
 
 function MenuIcon(props) {
   return (
@@ -46,7 +45,6 @@ function MobileNavLink({ children, ...props }) {
 }
 
 export function Header() {
-  const { data: session, status } = useSession({ required: false })
   return (
     <header className='bg-gray'>
       <nav>

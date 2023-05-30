@@ -1,13 +1,6 @@
-import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export function Contact() {
-  const [agreed, setAgreed] = useState(false)
-
   return (
     <div className='isolate bg-white px-6 lg:px-8'>
       <div className='mx-auto max-w-2xl text-center'>

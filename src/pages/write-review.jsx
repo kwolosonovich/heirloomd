@@ -6,7 +6,7 @@ import { ReviewForm } from '@/components/ReviewForm'
 import { Unauthorized } from '@/components/Unauthorized'
 
 export default function WriteAReview() {
-  const { data: session, status } = useSession({ required: true })
+  const { data: status } = useSession({ required: true })
   return (
     <>
       {status === 'authenticated' ? (

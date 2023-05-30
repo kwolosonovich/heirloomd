@@ -11,7 +11,7 @@ import { Reviews } from '@/components/Reviews'
 // import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 
 export default function Home() {
-  const { data: session, status } = useSession({ required: true })
+  const { data: status } = useSession({ required: true })
   return (
     <>
       {status === 'authenticated' ? (
