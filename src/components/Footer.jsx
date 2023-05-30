@@ -1,6 +1,5 @@
 import { Container } from '@/components/Container'
 import { Logomark } from '@/components/Logo'
-import { NavLinks } from '@/components/NavLinks'
 
 export function Footer() {
   return (

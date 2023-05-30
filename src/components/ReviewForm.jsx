@@ -1,12 +1,4 @@
-import { Fragment, useRef, useState } from 'react'
-import { Dialog, Listbox, Transition } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/24/outline'
-import {
-  CalendarIcon,
-  PaperClipIcon,
-  TagIcon,
-  UserCircleIcon,
-} from '@heroicons/react/20/solid'
+import { useState } from 'react'
 
 import { TextField } from '@/components/Fields'
 
