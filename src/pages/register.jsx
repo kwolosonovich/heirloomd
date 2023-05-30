@@ -1,4 +1,4 @@
-import { useSession } from 'next-auth/react'
+import { getSession, useSession } from 'next-auth/react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -9,13 +9,13 @@ import { Header } from '@/components/Header'
 import { SelectField, TextField } from '@/components/Fields'
 
 export default function Register() {
-  const { data: session, status } = useSession({ required: true })
+  const { data: status } = useSession({ required: true })
   return (
     <>
       {status === 'authenticated' ? (
         <>
           <Head>
-            <title>Sign Up - Pocket</title>
+            <title>Sign Up</title>
           </Head>
           <AuthLayout
             title='Sign up for an account'
@@ -69,13 +69,12 @@ export default function Register() {
                   label='How did you hear about us?'
                   id='referral-source'
                   name='referral_source'>
-                  <option>AltaVista search</option>
-                  <option>Super Bowl commercial</option>
-                  <option>Our route 34 city bus ad</option>
-                  <option>The “Never Use This” podcast</option>
+                  <option>Family or Friend</option>
+                  <option>Social media ad</option>
+                  <option>Google search</option>
                 </SelectField>
               </div>
-              <Button type='submit' color='cyan' className='mt-8 w-full'>
+              <Button type='submit' color='blue' className='mt-8 w-full'>
                 Get started today
               </Button>
             </form>
@@ -89,4 +88,19 @@ export default function Register() {
       )}
     </>
   )
+}
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/coming-soon',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
 }

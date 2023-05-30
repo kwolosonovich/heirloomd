@@ -1,37 +1,30 @@
-import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { getSession, useSession, signOut } from 'next-auth/react'
+import { getSession, signOut } from 'next-auth/react'
 
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
-import { TextField } from '@/components/Fields'
 
 const SignOut = () => {
-  const { data: session, status } = useSession()
-  const [content, setContent] = useState()
   return (
     <>
       <Head>
         <title>Sign out - Heirloomd</title>
       </Head>
-      <AuthLayout
-        title='Sign out of account'
-        subtitle={
-          <>
-            <Link href='/signOut' className='text-purple'>
-              Sign out
-            </Link>{' '}
-          </>
-        }>
-        <form>
+      <AuthLayout title='Sign out of account'>
+        <form className='space-y-5'>
           <Button
             type='submit'
-            className='mt-8 w-full bg-purple hover:bg-medPurple active:bg-lightPurple'
+            className='w-full bg-purple hover:bg-medPurple active:bg-lightPurple'
             href='/sign-in'
             onClick={() => signOut('google')}>
             Sign out
           </Button>
+          <div className='w-full text-center'>
+            <Link href='/' className='leading-6 text-purple'>
+              Back to home
+            </Link>
+          </div>
         </form>
       </AuthLayout>
     </>

@@ -1,5 +1,4 @@
-import { useSession, signOut, getSession } from 'next-auth/react'
-
+import { useSession, getSession } from 'next-auth/react'
 import Head from 'next/head'
 
 import { CallToAction } from '@/components/CallToAction'
@@ -7,12 +6,11 @@ import { ComingSoon } from '@/components/ComingSoon'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import { Pricing } from '@/components/Pricing'
+import { Plans } from '@/components/Plans'
 import { Reviews } from '@/components/Reviews'
-import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 
 export default function Home() {
-  const { data: session, status } = useSession({ required: true })
+  const { data: status } = useSession({ required: true })
   return (
     <>
       {status === 'authenticated' ? (
@@ -25,9 +23,8 @@ export default function Home() {
           <main>
             <Hero />
             <CallToAction />
-            {/* <SecondaryFeatures /> */}
+            <Plans />
             <Reviews />
-            <Pricing />
           </main>
           <Footer />
         </>

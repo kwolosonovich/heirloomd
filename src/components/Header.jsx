@@ -1,12 +1,12 @@
 import Link from 'next/link'
+import { useSession } from 'next-auth/react'
 import { Popover } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
+import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
-import { useSession } from 'next-auth/react'
 
 function MenuIcon(props) {
   return (
@@ -46,21 +46,21 @@ function MobileNavLink({ children, ...props }) {
 }
 
 export function Header() {
-  const { data: session, status } = useSession({ required: false })
+  const { data: status } = useSession({ required: false })
   return (
     <header className='bg-gray'>
       <nav>
         <Container className='relative z-50 flex justify-between py-8'>
           <div className='relative z-10 flex items-center gap-16'>
-            {/* <Link href='/' aria-label='Home'>
-              <Logo className='h-10 w-auto' />
+            <Link href='/' aria-label='Home'>
+              <Logomark className='h-10 w-10 flex-none fill-purple' />
             </Link>
             <div className='hidden lg:flex lg:gap-10'>
-              <NavLinks />
-            </div> */}
+              {status === 'authenticated' && <NavLinks />}
+            </div>
           </div>
           <div className='flex items-center gap-6'>
-            {/* <Popover className='lg:hidden'>
+            <Popover className='lg:hidden'>
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -97,19 +97,23 @@ export function Header() {
                           }}
                           className='absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20'>
                           <div className='space-y-4'>
-                            <MobileNavLink href='#features'>
-                              Features
-                            </MobileNavLink>
+                            <MobileNavLink href='/search'>Search</MobileNavLink>
+                            <MobileNavLink href='#plans'>Plans</MobileNavLink>
                             <MobileNavLink href='#reviews'>
                               Reviews
                             </MobileNavLink>
-                            <MobileNavLink href='#faqs'>FAQs</MobileNavLink>
-                          </div>
-                          <div className='mt-8 flex flex-col gap-4'>
-                            <Button href='/login' variant='outline'>
-                              Log in
-                            </Button>
-                            <Button href='#'>Download the app</Button>
+                            <MobileNavLink href='/contact'>
+                              Contact us
+                            </MobileNavLink>
+                            {status === 'authenticated' ? (
+                              <MobileNavLink href='/sign-out' variant='outline'>
+                                Sign out
+                              </MobileNavLink>
+                            ) : (
+                              <MobileNavLink href='/sign-in' variant='outline'>
+                                Sign in
+                              </MobileNavLink>
+                            )}
                           </div>
                         </Popover.Panel>
                       </>
@@ -117,7 +121,7 @@ export function Header() {
                   </AnimatePresence>
                 </>
               )}
-            </Popover> */}
+            </Popover>
             {status === 'authenticated' ? (
               <Button href='/sign-out' variant='outline' className='lg:block'>
                 Sign out
