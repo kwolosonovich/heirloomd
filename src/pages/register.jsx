@@ -9,7 +9,7 @@ import { Header } from '@/components/Header'
 import { SelectField, TextField } from '@/components/Fields'
 
 export default function Register() {
-  const { data: status } = useSession({ required: true })
+  const { data: session, status } = useSession({ required: true })
   return (
     <>
       {status === 'authenticated' ? (
